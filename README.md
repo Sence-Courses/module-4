@@ -11,3 +11,8 @@
 #### Logger utilizado para capturar informacion para la depuracion.
 ### error_logger
 #### Logger utilizado para la captura de errores de la aplicacion.
+<br>
+
+## Connector
+### exec_query
+#### Funcion generica para la ejecucion de todas las queries basicas.
