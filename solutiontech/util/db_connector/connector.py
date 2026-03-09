@@ -1,6 +1,6 @@
 import sqlite3
 from pathlib import Path
-from util.logger.logger import debug_logger, error_logger
+from util import debug_logger, error_logger
 
 DDBB_PATH = f'{Path(__file__).parent}/../../data/solutiontech.db'
 
@@ -18,7 +18,7 @@ def exec_query(querytype, datalist = ()):
         case 'delete':
           return [cursor.rowcount]
         case 'select':
-          return cursor.fetchone()
+          return cursor.fetchall()
         case 'select_all':
           return cursor.fetchall()
   except sqlite3.Error as e:
