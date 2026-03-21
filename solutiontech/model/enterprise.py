@@ -1,17 +1,11 @@
 import random
 from dataclasses import dataclass, field, InitVar
 from datetime import datetime
-from util.utils import get_attr_and_value
+from util.utils import get_attr_and_value, generate_random_id
 from util.logger.logger import debug_logger
 
 def generate_id(name):
-  print(name)
-  digits = 3
-  max_num = 10**digits - 1
-  random_num = random.randint(1, max_num)
-  return name[:3].strip().upper() + str(random_num).zfill(digits)
-  #print(id)
-  #return id
+  return name[:3].strip().upper() + generate_random_id(digits=3)
 
 @dataclass(slots=True)
 class Enterprise:
